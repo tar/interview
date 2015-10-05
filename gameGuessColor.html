@@ -1,19 +1,48 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+	<meta charset="utf-8">
+	<style type="text/css">
+	#sidebar {  position:relative;
+ 				width:200px;
+ 				padding:50px;
+ 				overflow: auto;
+ 			}
+	#restart { padding: 50px; 
+				position: absolute;
+				top:30px;
+				right: 0px;
+ 				width:200px;
+ 				overflow: auto;
+			}
+	#attempts { top: 200px; 
+    			padding: 50px; 
+    			position: absolute;
+   			}
+   	#input {   top: 250px; 
+    			padding: 50px; 
+    			position: absolute;
+   	}
+
+	</style>
+<title>Guess Сolor Game</title>	 
 </head>
 <body>
-	<h1> Click on the button to start game! <h1>
-	<button type="button" onclick="game()">Try it</button>
+		<div id="sidebar"><h3>Possible colours:</h3>
+		</div>
+		<div id="restart"><button style="width:100px; height: 28px" type="button">RESTART</button></div>
+		<div id="attempts"><h3>Attempts:</h3></div>
 
+	<div id="input"><input type="text" size="10" placeholder="Enter color"></div>
+	<div id="try"><button style="width:100px; height: 28px" type="button" onclick="game()">TRY</button>
+			</div>
 	<script>
+	var arrColor=["red","blue","yellow","violet","black","white","orange","brown","pink","purple"]
+	arrColor.sort();
+	var myColorIndex=Math.random() * (arrColor.length-1);
+	var countLeft=arrColor.length/2;
+	countLeft=Math.round(countLeft);
 	function game(){
-		var arrColor=["red","blue","yellow","violet","black","white","orange","brown","pink","purple"]
-		arrColor.sort();
-		var myColorIndex=Math.random() * (arrColor.length-1);
-		var countLeft=arrColor.length/2;
-		countLeft=Math.round(countLeft);
 		var userChoice=prompt("Guess color?" + "\n" + "Colors are:" + " " + arrColor[0] + ", " + arrColor[1] 
 				+ ", " + arrColor[2] + ","+ "\n" + arrColor[3] + ", " + arrColor[4] + ", " + arrColor[5] + 
 				", " + 	arrColor[6] + "\n" + arrColor[7] + ", " + arrColor[8] + ", " + arrColor[9] + "."
