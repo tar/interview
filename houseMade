@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus {
+            color:darkkhaki;
+        }
+        .navbar-default {
+            background-color: #262626;
+            border-color: #262626;
+        }
+        .navbar-default .navbar-nav > li > a {
+            color: whitesmoke;
+        }
+        body {
+            padding-top:250px;
+        }
+        .article {
+            background:rgba(255,255,255,0.88);
+            padding-top: 10px;
+            margin-bottom: 10px;
+        }
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            margin-bottom: 60px;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+
+            height: 30px;
+            line-height: 30px;
+            padding: 0 15px 0 15px;
+            background-color: rgba(255,255,255,0.7);
+        }
+    </style>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script>
+        // Устанавливаем изображение, которое будет являться фоном веб-страницы
+        $.backstretch("http://www.gandex.ru/upl/oboi/gandex.ru-19837_cea586a3714021efd334d4da1a98f48b.jpg");
+    </script>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid" >
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Parts</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4" style="text-align: center">
+                    <h4 style="line-height: 30px;color:whitesmoke">House Building</h4>
+                </div>
+                <div class="col-md-4">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="h3 page-header">About this site</h1>
+                <p style="margin-bottom: 20px">Building your own home is an often exciting,
+                    sometimes exhausting experience. It is also
+                    a perfect chance to have a home that is designed
+                    the way you want it to look. But whether you’re
+                    hiring a general contractor or doing most of
+                    the work yourself, it takes a lot of forethought
+                    and planning. This site can help you find inspiration
+                    to create the home of your dreams and get much-needed
+                    help to ensure you do not miss one of the many details that accompany this endeavor.</p>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h5>2015</h5>
+        </div>
+    </footer>
+
+</body>
+</html>
