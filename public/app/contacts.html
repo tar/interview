@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<html lang="ru">
+<head>
+    <!--Vendor (Libs)-->
+    <link rel="stylesheet" href="../vendor/css/bootstrap.min.css"/>
+    <!--Application-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Lora&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="../index.html">О компании</a></li>
+            <li><a href="construction.html">Конфигуратор</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row rowContactFeedback">
+        <div class="col-lg-5 contactInformation">
+            <h3>Контактная информация</h3>
+            <div class="row">
+                <div class="col-lg-12">
+                    <hr></hr>
+                </div>
+                <div class="col-lg-6">
+                    <address class="address">
+                        <strong>Компания.</strong><br>
+                        ул. Строителей, д. 221<br>
+                        Санкт-Петербург, 119600<br>
+                        Россия
+                    </address>
+                </div>
+                <div class="col-lg-6">
+                    <address class="address"><br>Телефон: (931) 246-6586<br>
+                        Факс: (931) 246-6586</address>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 feedbackNSummary">
+            <h3 data-toggle="tooltip" title="Заполните поля ниже, чтобы мы могли связаться с вами">Обратная связь</h3>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <label>Имя:</label>
+                        <input type="text" class="form-control" placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Электронная почта:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Запомнить меня</label>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <label>Фамилия:</label>
+                        <input type="text" class="form-control" placeholder="Введите вашу фамилию">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Пароль:</label>
+                        <input type="password" class="form-control" id="pwd">
+                    </div>
+                    <div class="btn btn-success btnGoToConfig"><strong>Подтвердить</strong></div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <hr></hr>
+            </div>
+            <h3>Ваш заказ</h3>
+            <div class="wholeSummaryContacts">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Категория</th>
+                            <th>Производитель</th>
+                            <th>Материал</th>
+                            <th>Стоимость</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody class="summary">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Vendor (Libs)-->
+<script src="../vendor/js/jquery.min.js"></script>
+<script src="../vendor/js/bootstrap.min.js"></script>
+<script src="../vendor/js/jquery.backstretch.min.js"></script>
+<script src="../vendor/js/underscore.js"></script>
+<!--Application-->
+<script src="js/dataElementsOfHouse.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

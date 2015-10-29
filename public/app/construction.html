@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!--Vendor (Libs)-->
+    <link rel="stylesheet" href="../vendor/css/bootstrap.min.css"/>
+    <!--Application-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Lora&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="../index.html">О компании</a></li>
+            <li><a href="construction.html">Конфигуратор</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+</nav>
+    <div class="container">
+        <div class="row rowSummary">
+            <div class="col-lg-6 overHouseMaket">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ol class="breadcrumb">
+                            <li class="dropdown"><a class="dropdown-toggle active" data-toggle="dropdown" data-type='category' href="#"  data-toggle="tooltip" title="Начните с выбора категории">Категория</a>
+                                <ul class="dropdown-menu category">
+                                    <!--<li><a class='selcat' href='#' data-type='brands' data-label="1">Крыша</a></li>-->
+                                    <!--<li><a class='selcat' href='#' data-type='brands' data-label="2">Стена</a></li>-->
+                                    <!--<li><a class='selcat' href='#' data-type='brands' data-label="3">Фундамент</a></li>-->
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-type='brand' href="#">Производитель</a>
+                                <ul class="dropdown-menu brand">
+                                    <!--<li><a class='selcat' href='#' data-target='materials' data-id="4">Руфлекс</a></li>-->
+                                    <!--<li><a class='selcat' href='#' data-target='materials' data-id="5">ИКО</a></li>-->
+                                    <!--<li><a class='selcat' href='#' data-target='materials' data-id="6">КБЕ</a></li>-->
+                                    <!--<li><a class='selcat' href='#' data-target='materials' data-id="7">Веко</a></li>-->
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-type='material' href="#">Материал</a>
+                                <ul class="dropdown-menu material">
+                                    <!--<li><a class='selcat' href='#' data-target='' data-id="8">Бетон</a></li>-->
+                                    <!--<li><a class='selcat' href='#' data-target='' data-id="9">Шифер</a></li>-->
+                                    <!--<li><a class='selcat' href='#' data-target='' data-id="10">Черепица</a></li>-->
+                                    <!--<li><a class='selcat' href='#' data-target='' data-id="11">Дерево</a></li>-->
+                                    <!--<li><a class='selcat' href='#' data-target='' data-id="12">Кирпич</a></li>-->
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="wholeSummary">
+                    <h3>Корзина</h3>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover table-condensed tableSummary">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Категория</th>
+                                <th>Производитель</th>
+                                <th>Материал</th>
+                                <th>Стоимость</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody class="summary">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="house">
+                    <img src="images/housemaket.jpg" class="img-thumbnail">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Vendor (Libs)-->
+<script src="../vendor/js/jquery.min.js"></script>
+<script src="../vendor/js/bootstrap.min.js"></script>
+<script src="../vendor/js/jquery.backstretch.min.js"></script>
+<script src="../vendor/js/underscore.js"></script>
+<script src="../vendor/js/ejs_production.js"></script>
+<!--Application-->
+<script src="js/dataElementsForTree.js"></script>
+<script src="js/dataElementsOfHouse.js"></script>
+<script src="js/testData.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
