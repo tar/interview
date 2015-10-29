@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        #sidebar { overflow: auto;
+            height: 100px;
+            width:270px;
+            top:0px;
+            background-color: darksalmon;
+            padding-left: 20px;
+        }
+        #restart { position: absolute;
+            top:28px;
+            float: left;
+            margin-left: 300px;
+            width:200px;
+            overflow: auto;
+        }
+        button { width:130px;
+            height: 28px;
+        }
+        body { background-color: azure;
+        }
+        #hot,#cold, #slider {display:inline-block;}
+        #hotNCold { margin-top: 20px;
+            width: 280px;
+        }
+        #attempts{margin-top:20px;
+        }
+        .hidden{
+            display: none;
+        }
+
+    </style>
+    <title>Guess Сolor Game</title>
+</head>
+<body>
+<div id="sidebar"><h3>Possible colours:</h3>
+    <p><script>
+        var arrColor=["red","blue","yellow","violet","black","white","orange","brown","pink","purple"];
+        for(var k=0; k<arrColor.length; k++) {
+            if(k===arrColor.length-1){
+                document.write(arrColor[k] + ".");
+            }
+            else {
+                document.write(arrColor[k] + ", ");
+            }
+        }
+    </script>
+    </p>
+</div>
+<div id="restart"><button style="width:100px; height: 28px" type="button" onclick="window.location.reload()">RESTART</button></div>
+
+<div id="attempts">Attempts:
+    <script>
+        document.write(String(Math.round(arrColor.length/2)));
+    </script>
+</div>
+<div id="hotNCold" class="hidden">
+    <div id="hot">Hot</div>
+    <div id="slider"><input id="input-slider" type="range" disabled="true"></div>
+    <div id="cold">Cold</div>
+</div>
+<input id="colorInput" type="text" size="10" placeholder="Enter color">
+</div>
+<button type="button" onclick="game()">TRY</button>
+<script>
+    var myColorIndex=Math.floor(Math.random() * (arrColor.length ));
+    console.log(myColorIndex);
+    var i = Math.round(arrColor.length/2);
+
+    function game(){
+
+        var userChoice = document.getElementById("colorInput").value;
+        i--;
+
+        if(arrColor[myColorIndex]===userChoice){
+            document.getElementById("attempts").innerHTML ="Success! You used only " + i + " attempts";
+            i = Math.round(arrColor.length/2);
+            document.getElementById("hotNCold").className = 'hidden';
+            myColorIndex=Math.floor(Math.random() * (arrColor.length ));
+            console.log(myColorIndex);
+        }
+        else{
+            if (i===0){
+                document.getElementById("attempts").innerHTML="You losed!";
+                i = Math.round(arrColor.length/2);
+                document.getElementById("hotNCold").className = 'hidden';
+                myColorIndex=Math.floor(Math.random() * (arrColor.length ));
+                console.log(myColorIndex);
+            }
+            else{
+                for (var y = 0; y < arrColor.length; y++) {
+                    if(arrColor[y]===userChoice){
+                        var v = Math.abs(myColorIndex-y);
+                        document.getElementById("input-slider").setAttribute("max",String(arrColor.length-1));
+                        document.getElementById("input-slider").setAttribute("min",String(1));
+                        document.getElementById("hotNCold").className = '';
+                        document.getElementById('input-slider').setAttribute("value",String(v));
+                    }
+                }
+                document.getElementById("attempts").innerHTML="Count of left attempts:" + " " + i;
+            }
+        }
+    }
+</script>
+</body>
+</html>
