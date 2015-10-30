@@ -4,39 +4,41 @@ var items = [
         label:"Крыша",
         value: "roof",
         pid: 0,
-        id: 1
+        id: '1'
     },
     {
         type:"brand",
         label:"Руфлекс",
         value: "ruflex",
         pid: 1,
-        id: 2
+        id: '2'
     },
     {
         type:"material",
         label:"Андулин",
+        value: "andulin",
         pid: 2,
-        id: 3
+        id: '3'
     },
     {
         type: "material",
         label: "Шифер",
+        value: "slate",
         pid: 2,
-        id: 4
+        id: '4'
     },
     {
         type: "material",
         label: "Черепица",
         pid: 2,
-        id: 5
+        id: '5'
     },
     {
         type: "brand",
         label: "ИКО",
         value: "ico",
         pid: 1,
-        id: 6
+        id: '6'
     },
     {
         type: "material",

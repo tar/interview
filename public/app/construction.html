@@ -3,16 +3,19 @@
 <head>
     <!--Vendor (Libs)-->
     <link rel="stylesheet" href="../vendor/css/bootstrap.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
     <!--Application-->
     <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Lora&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
 </head>
 
 <body>
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
-        <ul class="nav navbar-nav">
+        <div class="navbar-header"><div class="navbar-brand" style="font-family: 'Berkshire Swash', cursive;
+    color: whitesmoke;">Frame House</div></div>
+        <ul class="nav navbar-nav navbar-right">
             <li><a href="../index.html">О компании</a></li>
             <li><a href="construction.html">Конфигуратор</a></li>
             <li><a href="contacts.html">Контакты</a></li>
@@ -25,7 +28,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <ol class="breadcrumb">
-                            <li class="dropdown"><a class="dropdown-toggle active" data-toggle="dropdown" data-type='category' href="#"  data-toggle="tooltip" title="Начните с выбора категории">Категория</a>
+                            <li class="dropdown"><a class="dropdown-toggle js-toggle-dropdown-item" data-toggle="dropdown" data-type='category' href="#"  data-toggle="tooltip" title="Начните с выбора категории">Категория</a>
                                 <ul class="dropdown-menu category">
                                     <!--<li><a class='selcat' href='#' data-type='brands' data-label="1">Крыша</a></li>-->
                                     <!--<li><a class='selcat' href='#' data-type='brands' data-label="2">Стена</a></li>-->
@@ -64,7 +67,6 @@
                                 <th>Производитель</th>
                                 <th>Материал</th>
                                 <th>Стоимость</th>
-                                <th></th>
                             </tr>
                             </thead>
                             <tbody class="summary">

@@ -90,7 +90,9 @@
     box-shadow-right: 1px;
     border-radius: 2px;
     margin-left: 0px;
+
 }
+
 .breadcrumb{
     margin-bottom:0px;
     /*box-shadow: 0 -1px 1px 1px #adadad;*/
@@ -110,6 +112,10 @@
 
 .jumbotron > .row, .jumbotron h3{
     padding: 5px;
+}
+
+.jumbotron{
+    background-color: white;
 }
 
 .contactInformation, .feedbackNSummary{
