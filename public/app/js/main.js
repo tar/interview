@@ -6,14 +6,17 @@ $(document).ready(function() {
     $('.dropdown').on("click", '.js-toggle-dropdown-item', function (event) {
         $.each(collections, function (key, value){
             if($(event.target).data("type") == key && $("." + key).children("li").length == 0)
-                    appendDropdownFirst(key);
+                appendDropdownFirst(key);
         });
     });
 
     $('.dropdown-menu').on("click", 'li', function (event) {
         var arrChildItem = findChild(event);
+        var keyForTemp = $(event.target).data("type");
+        tempItem[keyForTemp]=$(this).text();
         appendDropdownChild(getTypeOfItem(arrChildItem),arrChildItem);
     })
+
 });
 function appendDropdownFirst(typeItem){
     $.each(collections[typeItem], function (i,value){
@@ -32,13 +35,14 @@ function getTypeOfItem(arrItem){
 }
 
 function appendDropdownChild(typeItem,arrChildItem){
+    $($("." + typeItem).children("li")).remove();
     $.each(arrChildItem, function (i,value){
-        if ($("." + typeItem).children("li").length == 0) {
-            $("." + typeItem).append("<li><a data-type = '" + typeItem + "' data-id='" + arrChildItem[i].id + "'>"
-                + arrChildItem[i].label + "</a></li>");
-        }
+        $("." + typeItem).append("<li><a data-type = '" + typeItem + "' data-id='" + arrChildItem[i].id + "'>"
+            + arrChildItem[i].label + "</a></li>");
     })
 }
+
+var tempItem ={};
 
 var items = [
     {

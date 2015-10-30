@@ -1,4 +1,0 @@
-interview
-=========
-
-for interview tasks
