@@ -25,6 +25,7 @@ function dropdownMenuLiClick(){
         var idForTemp = $(event.target).data("id");
         tempItem[keyForTemp] = $(this).text();
         if($('.summary').children("tr").length == 0){
+            $('thead > tr').prepend("<th></th>");
             putTr();
         }
         $('tr:last > td > input.' + keyForTemp).val(tempItem[keyForTemp]);
